@@ -1,0 +1,3 @@
+Este es el texto escrito en FileWriter
+Este es el texto escrito en PrintWriter
+Este es el texto escrito en BufferedWriter

@@ -9,7 +9,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        String ruta = "adt1_ejemplo1/src/main/resources/";
+        String ruta = "./adt1_ejemplo1/src/main/resources/";
         File fichero = new File(ruta + "fichero.txt");
 
         System.out.println(fichero.getParent());
