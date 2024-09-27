@@ -1,0 +1,7 @@
+Realiza un proyecto Java deunuominado adt1_practica2 que contenga todos los ejercicios que se
+piden a continuación. Cada ejercicio es independiente del anterior y tendrá su fichero AppX.java
+donde estará su método main().
+Es decir, para cada ejercicio realizaremos un AppX.java distinto dentro del mismo proyecto, para no
+tener que crear un nuevo proyecto cada vez.
+Tener en cuenta que vamos a crear una carpeta denominada resources donde se alojan los
+ficheros binarios o de texto necesarios para cada uno de los ejercicios.Linea nueva

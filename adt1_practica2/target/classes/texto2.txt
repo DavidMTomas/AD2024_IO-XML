@@ -1,0 +1,6 @@
+1. Nos pedirá la ruta del fichero de texto a leer y lo imprimimos por pantalla.
+2. Nos pedirá la ruta del fichero a escribir y nos pedirá que introduzcamos un texto por
+pantalla, que luego escribiremos en el fichero. Si el fichero existe, añadiremos el texto al
+final del fichero.
+3. Finalizará el programa.
+Nota: Mientras no finalicemos seguirá mostrando el menú para volver a realizar tareas.
