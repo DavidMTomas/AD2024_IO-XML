@@ -57,6 +57,8 @@ public class App {
             case 6:
                 gestionArchivos.eliminarFichero(sc);
                 break;
+            case 7:
+                break;
             default:
                 System.out.println("Valor no encontrado");
 
