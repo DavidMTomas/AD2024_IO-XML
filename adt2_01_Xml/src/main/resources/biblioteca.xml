@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro id="L001" idioma="español" publicado="2022-01-15">
+        <titulo>Aprendiendo DOM</titulo>
+        <autor>
+            <nombre>Juan</nombre>
+            <apellido>Pérez</apellido>
+            <nacionalidad>Española</nacionalidad>
+        </autor>
+        <editorial nombre="Editorial Ejemplo" pais="España"/>
+        <genero>Educativo</genero>
+        <resumen>
+            Este libro es una introducción completa al DOM, proporcionando ejemplos y explicaciones detalladas.
+        </resumen>
+        <capitulos>
+            <capitulo numero="1" paginas="20">
+                <titulo>Introducción al DOM</titulo>
+                <descripcion>Conceptos básicos del DOM.</descripcion>
+            </capitulo>
+            <capitulo numero="2" paginas="30">
+                <titulo>Manipulación del DOM</titulo>
+                <descripcion>Técnicas para manipular el DOM con JavaScript.</descripcion>
+            </capitulo>
+        </capitulos>
+    </libro>
+
+    <libro id="L002" idioma="inglés" publicado="2020-05-10">
+        <titulo>XML para Principiantes</titulo>
+        <autor>
+            <nombre>Maria</nombre>
+            <apellido>Smith</apellido>
+            <nacionalidad>Británica</nacionalidad>
+        </autor>
+        <editorial nombre="XML Press" pais="Reino Unido"/>
+        <genero>Tecnología</genero>
+        <resumen>
+            Una guía fácil de seguir para aquellos que desean aprender XML desde cero.
+        </resumen>
+        <capitulos>
+            <capitulo numero="1" paginas="15">
+                <titulo>¿Qué es XML?</titulo>
+                <descripcion>Una introducción al lenguaje XML y sus usos.</descripcion>
+            </capitulo>
+            <capitulo numero="2" paginas="25">
+                <titulo>Elementos y Atributos</titulo>
+                <descripcion>Cómo estructurar documentos XML utilizando elementos y atributos.</descripcion>
+            </capitulo>
+        </capitulos>
+    </libro>
+</biblioteca>
