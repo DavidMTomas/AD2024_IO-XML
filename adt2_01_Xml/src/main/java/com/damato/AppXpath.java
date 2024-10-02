@@ -16,7 +16,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class AppXpath {
-    private static Document dom;
+    static Document dom;
     public static void main(String[] args) {
         //metodo uno para busqueda libros en venta del xml libros
         try {
@@ -83,7 +83,8 @@ public class AppXpath {
                                 Node atributo = atributos.item(x);
                                 if(atributo instanceof Element){
                                     System.out.println(atributo.getNodeName()+": "+atributo.getTextContent());
-                                    atributo.get
+
+
                                 }
                             }
                             System.out.println("-------------------------");
@@ -99,7 +100,7 @@ public class AppXpath {
 
     }
 
-    private static void accederArbol() throws ParserConfigurationException, IOException, SAXException {
+     static void accederArbol() throws ParserConfigurationException, IOException, SAXException {
         File file = new File("adt2_01_Xml/src/main/resources/libros.xml");
         if(file.exists())
             System.out.println("El archivo existe");
