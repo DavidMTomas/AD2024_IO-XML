@@ -19,7 +19,9 @@ public class App {
         try {
             Document documento= DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(new File("adt2_01_Xml/src/main/resources/biblioteca.xml"));
             //eliminar nodos de texto vacios
-            documento.getDocumentElement().normalize();
+          documento.getDocumentElement().normalize();
+
+
 
             //Nodo raiz
             Element rootElement = documento.getDocumentElement();
@@ -31,6 +33,23 @@ public class App {
                 Node node = lista.item(i);
                 if(node instanceof Element)
                 System.out.println(node.getNodeName());
+            }
+
+            // Recorrer arbol de nodos
+            System.out.println("Padre de "+rootElement.getNodeName()+" es:"+rootElement.getParentNode().getNodeName());
+            System.out.println("Primer hijo: "+rootElement.getFirstChild().getNodeName());
+            System.out.println("Primer hijo hermano: "+rootElement.getFirstChild().getNextSibling().getNodeName());
+            System.out.println("Ultimo hijo: elemento: "+rootElement.getLastChild().getNodeName()+" hermano de :"+rootElement.getLastChild().getPreviousSibling().getNodeName());
+
+
+            //Acceder a un nodo concreto Libro con id L002
+            NodeList concreto= rootElement.getElementsByTagName("libro");
+            for (int i=0 ; i<concreto.getLength();i++){
+                Node node = concreto.item(i);
+                if(node instanceof Element){
+                    System.out.println(node.getNodeName());
+                    System.out.println(((Element) node).getAttribute("id"));
+                }
             }
 
         } catch (ParserConfigurationException e) {

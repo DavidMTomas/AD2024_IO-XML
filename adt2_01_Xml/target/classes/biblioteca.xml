@@ -23,7 +23,6 @@
             </capitulo>
         </capitulos>
     </libro>
-
     <libro id="L002" idioma="inglés" publicado="2020-05-10">
         <titulo>XML para Principiantes</titulo>
         <autor>
