@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="adt1_ejemplo1" />
         <module name="adt2_01_Xml_GOT" />
+        <module name="adt2_practica0" />
         <module name="adt1_ejemplo7" />
         <module name="adt1_practica2" />
         <module name="adt1_ejemplo8" />

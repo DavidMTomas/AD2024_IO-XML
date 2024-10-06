@@ -1,0 +1,7 @@
+<!ELEMENT peliculas (pelicula+)>
+        <!ELEMENT pelicula (titulo, director, actores)>
+        <!ATTLIST pelicula codigo DATA >
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT director (#PCDATA)>
+        <!ELEMENT actores (actor+)>
+        <!ELEMENT actor (#PCDATA)>
