@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libros>
+            
+    
+    <prestamo>
+                        
+        
+        <libro ibn="978848652202">
+                                    
+            
+            <titulo>El Ocho</titulo>
+                                    
+            
+            <autor>Katherine Neville</autor>
+                                    
+            
+            <anyo>1988</anyo>
+                                    
+            
+            <editorial>Ballantine Books</editorial>
+                                
+        
+        </libro>
+                    
+        
+        <libro isbn="8422667657">
+                        
+            <titulo>Qumran</titulo>
+                        
+            <autor>Eliette Abecasis</autor>
+                        
+            <anyo>1997</anyo>
+                        
+            <editorial>Ediciones B</editorial>
+                    
+        </libro>
+                
+        <libro isbn="AAAAAAAAAA">
+                        
+            <titulo>MI TITULO</titulo>
+                        
+            <autor>David</autor>
+                        
+            <anyo>2024</anyo>
+                        
+            <editorial>Ediciones Z</editorial>
+                    
+        </libro>
+            
+    </prestamo>
+            
+    
+    <venta>
+                
+        <libro isbn="84675069x">
+                        
+            <titulo>Memoria de Idun</titulo>
+                        
+            <autor>Laura Gallego garcia</autor>
+                        
+            <anyo>2005</anyo>
+                        
+            <editorial>Ediciones SM</editorial>
+                    
+        </libro>
+            
+        <libro isbn="9788483468081">
+            <titulo>Next</titulo>
+            <autor>Michael Criton</autor>
+            <anyo>2008</anyo>
+            <editorial>DeBolsillo</editorial>
+        </libro>
+    </venta>
+        
+    
+    <compra/>
+    
+</libros>
