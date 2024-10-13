@@ -22,10 +22,8 @@ public class Ejercicio4 {
         XmlCtrlDom xml = new XmlCtrlDom();
         try {
             //version1(xml, ruta);
-
-            //version2(xml, ruta);
-
-            version3(xml, ruta);
+            version2(xml, ruta);
+            // version3(xml, ruta);
 
 
         } catch (ParserConfigurationException e) {
@@ -34,8 +32,8 @@ public class Ejercicio4 {
             throw new RuntimeException(e);
         } catch (SAXException e) {
             throw new RuntimeException(e);
-        } catch (XPathExpressionException e) {
-            throw new RuntimeException(e);
+//        } catch (XPathExpressionException e) {
+//            throw new RuntimeException(e);
         }
     }
 
@@ -74,26 +72,31 @@ public class Ejercicio4 {
 
         //recorremos los alumnos
         for (int i = 0; i < raiz.getChildNodes().getLength(); i++) {
-            Node elemento = raiz.getChildNodes().item(i);
+            NodeList elemento = (NodeList) raiz.getChildNodes().item(i);
             if (elemento instanceof Element) {
                 id = ((Element) elemento).getAttribute("id");
-                switch (elemento.getNodeName()) {
-                    case "nom":
-                        nom = elemento.getTextContent();
-                        break;
-                    case "cognom":
-                        cognom = elemento.getTextContent();
-                        break;
-                    case "curs":
-                        curs = elemento.getTextContent();
-                        break;
+                for (int j = 0; j < elemento.getLength(); j++) {
+                    Node attEl = elemento.item(j);
+                    if (attEl instanceof Element) {
+                        switch (attEl.getNodeName()) {
+                            case "nom":
+                                nom = attEl.getTextContent();
+                                break;
+                            case "cognom":
+                                cognom = attEl.getTextContent();
+                                break;
+                            case "curs":
+                                curs = attEl.getTextContent();
+                                break;
+                        }
+
+                    }
                 }
                 Alumne a = new Alumne(id, nom, cognom, curs);
                 System.out.println(a.toString());
                 alumnes.add(a);
             }
         }
-
     }
 
     private static void version1(XmlCtrlDom xml, File ruta) throws ParserConfigurationException, IOException, SAXException {
@@ -124,16 +127,19 @@ public class Ejercicio4 {
                     }
                 }
                 Alumne alu = new Alumne(id, nom, cognom, curs);
+                System.out.println(alu);
                 alumnes.add(alu);
             }
         }
     }
 
 
-    static class Alumne {
+    static class Alumne implements Comparable<Alumne> {
 
         private String id;
         private String nom;
+
+        private String nota;
 
         private String cognom;
         private String curs;
@@ -146,10 +152,33 @@ public class Ejercicio4 {
             this.curs = curs;
         }
 
+        public Alumne(String id, String nom, String cognom, String nota, String curs) {
+            this.id = id;
+            this.nom = nom;
+            this.cognom = cognom;
+            this.nota = nota;
+            this.curs = curs;
+        }
+
         @Override
         public String toString() {
             return "Alumne{" + "id= " + id + '\'' +
                     "nom='" + nom + '\'' +
+                    ", cognom='" + cognom + '\'' +
+                    ", curs='" + curs + '\'' +
+                    '}';
+        }
+
+        public String getNota() {
+            return nota;
+        }
+
+
+        public String toString2() {
+            return "Alumne{" +
+                    "id='" + id + '\'' +
+                    ", nom='" + nom + '\'' +
+                    ", nota='" + nota + '\'' +
                     ", cognom='" + cognom + '\'' +
                     ", curs='" + curs + '\'' +
                     '}';
@@ -185,6 +214,22 @@ public class Ejercicio4 {
 
         public void setCurs(String curs) {
             this.curs = curs;
+        }
+
+        @Override
+        public int compareTo(Alumne o) {
+            try {
+                double thisNota = Double.parseDouble(this.nota);
+                double oNota = Double.parseDouble(o.nota);
+
+                //-1 this es menor
+                // 1 this es mayor
+                //ordena de menor a mayor
+                return Double.compare(thisNota, oNota);
+            } catch (NumberFormatException e) {
+                System.out.println("Error al convertir la nota");
+            }
+            return 0;
         }
     }
 }

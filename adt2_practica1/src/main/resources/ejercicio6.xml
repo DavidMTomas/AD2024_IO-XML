@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnes>
+    <alumne id="1">
+        <nom>Roberto</nom>
+        <cognom>Angel</cognom>
+        <nota>7.5</nota>
+        <curs>2nDAM</curs>
+    </alumne>
+    <alumne id="2">
+        <nom>Vicente</nom>
+        <cognom>Garcia</cognom>
+        <nota>5</nota>
+        <curs>2nASIX</curs>
+    </alumne>
+    ...
+    <alumne id="8">
+        <nom>Sabina</nom>
+        <cognom>Ramiro</cognom>
+        <nota>9</nota>
+        <curs>2nDAM</curs>
+    </alumne>
+</alumnes>
