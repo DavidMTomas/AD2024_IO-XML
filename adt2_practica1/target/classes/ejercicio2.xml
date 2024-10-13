@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alumnos>
+    <alumno>
+        <nombre>Juan</nombre>
+        <apellidos>Marti Lopez</apellidos>
+        <edad>18</edad>
+    </alumno>
+    <alumno>
+        <nombre>Amparo</nombre>
+        <apellidos>Luna Dolores</apellidos>
+        <edad>25</edad>
+    </alumno>
+</alumnos>

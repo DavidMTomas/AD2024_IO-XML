@@ -60,6 +60,7 @@ public class ejercicio3 {
 
                 System.out.println("Listado de libros en: "+parametro);
                 for (int i = 0; i < libros.getLength(); i++) {
+                   // System.out.println(libros.item(i).getTextContent());  // MUESTRA EL TEXTO DE TODO EL LIBRO
                     NodeList libro = libros.item(i).getChildNodes();
                         for (int j = 0; j < libro.getLength();j++) {
                             Node elementos = libro.item(j);
